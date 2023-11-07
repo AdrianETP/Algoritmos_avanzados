@@ -3,6 +3,7 @@ import objects
 import p2
 import p3
 import p4
+import p5
 
 
 def lee_archivo(archivo):
@@ -47,3 +48,9 @@ for p in points:
 
         # Añadir el nuevo triángulo a la lista 'T'
         T.append(new_triangle)
+
+
+p5.graficar_puntos(points)
+for t in T:
+    p5.graficar_triangulo(t.puntos[0], t.puntos[1], t.puntos[2])
+p5.mostrar_grafico()

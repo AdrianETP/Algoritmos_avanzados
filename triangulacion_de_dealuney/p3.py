@@ -2,7 +2,8 @@ import math
 
 
 def distancia(centro, punto):
-    return math.sqrt((punto.x - centro[0])**2 + (punto.y - centro[1])**2)
+    cx, cy = centro
+    return math.sqrt((punto.x - cx)**2 + (punto.y - cy)**2)
 
 
 def dentroTriangulo(puntos, triangulos):

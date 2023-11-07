@@ -34,5 +34,5 @@ class Triangulo:
         self.lados = [s1, s2, s3]
 
         # darle valores a centro y radio es el problema 2
-        self.centro = None
-        self.radio = None
+        self.centro = (0, 0)
+        self.radio = 0

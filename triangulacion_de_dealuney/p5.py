@@ -25,26 +25,4 @@ def circuncentro(p1, p2, p3):
 
 
 def mostrar_grafico():
-    plt.ylim(-20, 20)
-    plt.xlim(-20, 20)
-    plt.gca().set_aspect('equal', adjustable='box')
     plt.show()
-
-
-puntos = lee_archivo("puntos.txt")[1]
-graficar_puntos(puntos)
-
-
-if len(puntos) >= 3:
-    p1, p2, p3 = puntos[:3]
-    graficar_triangulo(p1, p2, p3)
-
-    # Dibujar el círculo circunscrito
-    centro = circuncentro(p1, p2, p3)
-    radio = math.sqrt((centro.x - p1.x)**2 + (centro.y - p1.y)**2)
-    circulo = plt.Circle((centro.x, centro.y), radio,
-                         fill=False, edgecolor='purple')
-    plt.gca().add_patch(circulo)
-
-mostrar_grafico()
-plt.savefig('grafico.png')
