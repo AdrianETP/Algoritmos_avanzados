@@ -143,5 +143,4 @@ def BigT(points):
 # graficar
     t = [v1, v2, v3]
     triangle = objects.Triangulo(t)
-    draw_hull(points, t)
     return triangle
