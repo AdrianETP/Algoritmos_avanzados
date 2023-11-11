@@ -30,9 +30,17 @@ permutaciones = generar_permutaciones()
 
 # Imprimir las permutaciones
 smallest_distance_perm = []
+smallest_distance = float('inf')
 for i, perm in enumerate(permutaciones):
     distances = []
-    for j in range(len(G)):
-        distances.append(perm[G[j][0]] - perm[G[j][1]])
+    for j in G:
+        a = j[0]
+        b = j[1]
+        distances.append(abs(perm[a] - perm[b]))
     print(f'Permutación {i+1}: {perm}')
-    print(max(distances))
+    if max(distances) < smallest_distance:
+        smallest_distance_perm = perm
+        smallest_distance = max(distances)
+
+print("the smallest distance permutation is: \n",
+      smallest_distance_perm, "\n with a distance of: ", smallest_distance)
