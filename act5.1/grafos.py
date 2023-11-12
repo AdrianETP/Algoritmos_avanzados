@@ -14,7 +14,7 @@ G = [
 ]
 
 
-def generar_permutaciones(n=len(G)):
+def generar_permutaciones(n=9):
     array = np.arange(n)  # Crear un array con n elementos
     permutaciones = []  # Lista para almacenar las permutaciones
 
